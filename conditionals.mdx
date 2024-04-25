@@ -1,0 +1,38 @@
+---
+title: "Conditionals"
+description: "TERNARY OPERATORS , OPPOSITE TERNARY OPERATORS"
+date: "2024-04-23"
+modified: "2024-04-23"
+tags: ["blog"]
+cover_image: true
+---
+
+# conditions
+
+## shorthand notations in jsx
+
+```JavaScript
+let productTypeId = 10;
+
+// TERNARY OPERATORS
+let productName = productTypeId > 9 && "prodA";
+// productName = "prodA"
+
+// OPPOSITE TERNARY OPERATORS
+productName = productTypeId > 9 || "prodA";
+// productName != "prodA"
+```
+
+## if else operator
+
+```JavaScript
+let productTypeId = 10;
+
+// TERNARY OPERATORS
+let productName = productTypeId > 9 ? "prodA" : "prodB";
+// productName = "prodA"
+
+const Component =  ()=>{
+    return ( (productTypeId > 9) ? <div>A</div> : <div>B</div> )
+    }
+```
