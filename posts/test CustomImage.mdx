@@ -12,7 +12,7 @@ cover_image: true
 ## CustomImage
 
 <CustomImage
-  src="https://github.com/kiwaiko/blog/blob/main/images/array.jpg"
+  src="https://raw.githubusercontent.com/kiwaiko/blog/blob/main/images/array.jpg"
   alt="LOOK AT YOU!"
 />
 <p>
@@ -21,7 +21,19 @@ cover_image: true
 <pre>
   <code className="language-javascript">backtick.fences('for blocks')</code>
 </pre>
+```tsx
+export async function getPostByName(fileName: string) {
+    const res = await fetch(`my-github-url/${fileName}`)
 
+    const rawMDX = await res.text()
+
+    const duration = readingDuration(rawMDX, {
+        emoji: false,
+    })
+
+}
+
+```
 <p>
   Two <strong>asterisks</strong> for strong.
 </p>
@@ -33,3 +45,4 @@ cover_image: true
   <li>decimals and a dot for ordered items</li>
   <li>decimals and a dot for ordered items</li>
 </ol>
+```
