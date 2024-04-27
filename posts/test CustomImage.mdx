@@ -18,10 +18,12 @@ cover_image: true
 <p>
   Some <code>backticks</code> for inline.
 </p>
+```javascript
 <pre>
   <code className="language-javascript">backtick.fences('for blocks')</code>
 </pre>
-```tsx
+```
+<CustomCode code="
 export async function getPostByName(fileName: string) {
     const res = await fetch(`my-github-url/${fileName}`)
 
@@ -31,9 +33,20 @@ export async function getPostByName(fileName: string) {
         emoji: false,
     })
 
-}
+}" language="tsx"/>
 
+```tsx
+export async function getPostByName(fileName: string) {
+  const res = await fetch(`my-github-url/${fileName}`);
+
+  const rawMDX = await res.text();
+
+  const duration = readingDuration(rawMDX, {
+    emoji: false,
+  });
+}
 ```
+
 <p>
   Two <strong>asterisks</strong> for strong.
 </p>
